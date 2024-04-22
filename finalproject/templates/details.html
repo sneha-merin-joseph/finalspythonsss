@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<!--<nav class="navbar navbar-light bg-light">-->
+<!--    <a class="btn btn-primary" href="review">review</a>-->
+<!--</nav>-->
+
+<!--<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">-->
+    <div class="team-item position-relative rounded overflow-hidden">
+        <div class="overflow-hidden">
+            <img class="img-fluid" src="{% static 'img/team-2.jpg' %}" alt="" style="width:650px;height:600px;">
+        </div>
+        <div>
+            <h5>FILM:Manjummal boys</h5>
+            <h5>ACTORS:Soubin,Balu,Sreenath bhasi</h5>
+            <h5>CATEGORY:Emotional</h5>
+            <p>Released on February 27 "<br>
+                Description:Manjummel Boys is the story of a bunch of youngsters and it is well mixed with a survival drama. Some of the lines from Kamal Haasan's Guna are played during the climax. The bromance between the boys is also well presented in Manjummel Boys<br>
+                <a href="https://youtu.be/id848Ww1YLo?si=sU9Xgl50f2RYd7pd">Trailer</a></p>
+             <nav class="navbar navbar-light bg-light">
+                 <a class="btn btn-primary" href="ho">REVIEW</a>
+             </nav>
+             <nav class="navbar navbar-light bg-light">
+                 <a class="btn btn-primary" href="index">Back</a>
+             </nav>
+
+        </div>
+    </div>
+</div>
+
+   {% endblock %}
+

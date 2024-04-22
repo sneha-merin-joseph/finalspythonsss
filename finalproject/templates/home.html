@@ -1,0 +1,62 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner">
+                <div class="banner-text">
+                    <h1>My Movies</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">-->
+<!--    <span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
+<!--<div class="collapse navbar-collapse" id="navbarCollapse">-->
+<!--    <div class="navbar-nav ms-auto p-4 p-lg-0">-->
+<!--        {% if user.is_authenticated %}-->
+<!--        <li></li> </li>-->
+<!--        <a href="logout" class="nav-item nav-link active">Logout</a>-->
+<!--        {% else %}-->
+<!--        <a href="{% url 'register' %}" class="nav-item nav-link">Register</a>-->
+<!--        <a href="login" class="nav-item nav-link">Login</a>-->
+<!--        {% endif %}-->
+<!--    </div>-->
+
+<!--</div>-->
+<div class="container">
+
+    <div class= "row">
+        {% for i in movie_list %}
+
+        <div class="col-md-3">
+            <div class="card">
+  <img src="{{i.img.url}}" alt="Card image cap" alt="..."  height="250px">
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}} </h5>
+    <p class="card-text">{{i.desc}}<br>
+       {{i.release_date}}<br>
+        {{i.actors}}<br>
+        {{i.trailer_link}}
+    </p>
+    <a href="{% url  'detail' i.id %}" class="btn btn-primary">Go somewhere</a>
+
+  </div>
+</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<nav class="navbar navbar-light bg-light">
+    <a class="btn btn-primary" href="logout">logout</a>
+</nav>
+
+<nav class="navbar navbar-light bg-light">
+    <a class="btn btn-primary" href="film">Back to Homepage</a>
+</nav>
+{% endblock %}
